@@ -29,7 +29,7 @@ const getGreetingDependOnTime = function (myDate) {
     }
 }
 
-export default {
+module.exports = {
     celsiusToFahrenheit,
     fahrenheitToCelsius,
     getGreetingDependOnTime
