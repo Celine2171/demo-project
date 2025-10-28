@@ -1,0 +1,30 @@
+{
+  "name": "Demo_Project_for_MMI",
+  "version": "1.0.0",
+  "description": "Project to apply theoretical knowledge",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha tests/*.js --exit",
+    "test_with_codeCoverage": "nyc --reporter=text mocha tests/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moniSt13/MMI_WS23_24.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "chai": "^6.2.0",
+    "express": "^5.1.0",
+    "material-icons": "^1.13.14",
+    "mocha": "^11.7.4",
+    "newman": "^6.2.1",
+    "supertest": "^6.3.4"
+  },
+  "devDependencies": {
+    "nyc": "^17.1.0"
+  }
+}
