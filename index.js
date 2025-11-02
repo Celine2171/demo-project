@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const auxiliaryAPI = require('./public/js/auxiliaryAPI.js')
+const auxiliaryAPI = require('./public/js/auxiliaryAPI.js');
 
 const {urlencoded, json} = bodyParser;
 const port = process.env.PORT || 8080;
@@ -16,38 +16,38 @@ app.use('/public', express.static(__dirname + '/public'));
 
 //homepage for calculator
 app.get('/', (req, res) => {
-    res.sendFile("index.html", {root: __dirname })
+  res.sendFile('index.html', {root: __dirname });
 });
 
 // calculation via Rest API
 app.post('/api/fromCelsiusToFahrenheit', (req, res) => {
-    const {temperature} = req.body;
-    const result = auxiliaryAPI.celsiusToFahrenheit(temperature);
-    return res.status(200).send({
-        result
-    });
+  const {temperature} = req.body;
+  const result = auxiliaryAPI.celsiusToFahrenheit(temperature);
+  return res.status(200).send({
+    result
+  });
 });
 
 app.post('/api/fromFahrenheitToCelsius', (req, res) => {
-    const {temperature} = req.body;
-    const result = auxiliaryAPI.fahrenheitToCelsius(temperature);
-    return res.status(200).send({
-        result
-    });
+  const {temperature} = req.body;
+  const result = auxiliaryAPI.fahrenheitToCelsius(temperature);
+  return res.status(200).send({
+    result
+  });
 });
 
 app.use((req, res) => {
-    return res.status(200).send({
-        message: 'A wrong link was entered',
-    });
+  return res.status(200).send({
+    message: 'A wrong link was entered',
+  });
 });
 
 app.listen(port, (err) => {
-    if (!err) {
-        console.log(`App started on port ${port}`);
-    } else {
-        console.log(err);
-    }
+  if (!err) {
+    console.log(`App started on port ${port}`);
+  } else {
+    console.log(err);
+  }
 });
 
 module.exports = app;
