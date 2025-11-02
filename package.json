@@ -1,12 +1,12 @@
 {
-  "name": "Demo_Project_for_MMI",
+  "name": "demo-project-for-mmi25",
   "version": "1.0.0",
   "description": "Project to apply theoretical knowledge",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "test": "mocha tests/*.js --exit",
-    "test_with_codeCoverage": "nyc --reporter=text mocha tests/*.js"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "chai": "^6.2.0",
+    "eslint": "^9.39.0",
     "mocha": "^11.7.4",
     "nyc": "^17.1.0",
     "supertest": "^7.1.4"
