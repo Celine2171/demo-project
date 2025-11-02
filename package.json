@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "mocha --loader=@mochajs/node-loader tests/**/*.js",
+    "test": "mocha --loader=@mochajs/node-loader tests/**/*.js --exit --timeout 5000 || (pkill -f node && exit 1)",
     "lint": "eslint ."
   },
   "repository": {

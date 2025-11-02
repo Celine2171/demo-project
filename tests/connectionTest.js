@@ -5,6 +5,12 @@ should();
 const api = supertest.agent(server);
 
 describe('Temperature Conversion API Tests', () => {
+  after((done) => {
+    server.close(() => {
+      done();
+    });
+  });
+
   describe('POST /api/fromCelsiusToFahrenheit', () => {
     it('should convert 0°C to 32°F', async () => {
       const response = await api

@@ -47,12 +47,10 @@ app.use((req, res) => {
   });
 });
 
-app.listen(port, (err) => {
+const server = app.listen(port, (err) => {
   if (!err) {
-    console.log(`App started on port ${port}`);
-  } else {
-    console.log(err);
+    console.log(`Server is running on port ${port}`);
   }
 });
 
-export default app;
+export default server;
