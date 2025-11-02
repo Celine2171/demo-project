@@ -1,7 +1,7 @@
-const supertest = require('supertest');
-const server = require('../index');
-const chai = require('chai');
-chai.should();
+import supertest from 'supertest';
+import server from '../index.js';
+import { should } from 'chai';
+should();
 const api = supertest.agent(server);
 
 describe('Temperature Conversion API Tests', () => {

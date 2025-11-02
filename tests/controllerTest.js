@@ -1,5 +1,5 @@
-const expect = require('chai').expect;
-const apiTemperature = require('../public/js/auxiliaryAPI');
+import { expect } from 'chai';
+import * as apiTemperature from '../public/js/auxiliaryAPI.js';
 
 describe('fahrenheitToCelsius()', function(){
   it('should return 0°C for 32°F', function() {

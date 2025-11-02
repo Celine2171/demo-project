@@ -1,0 +1,13 @@
+{
+  "loader": ["@mochajs/node-loader"],
+  "extension": ["js"],
+  "package": "./package.json",
+  "recursive": true,
+  "reporter": "spec",
+  "timeout": 5000,
+  "node-option": [
+    "experimental-specifier-resolution=node",
+    "es-module-specifier-resolution=node"
+  ]
+}
+

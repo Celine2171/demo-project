@@ -1,6 +1,11 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const auxiliaryAPI = require('./public/js/auxiliaryAPI.js');
+import express from 'express';
+import bodyParser from 'body-parser';
+import * as auxiliaryAPI from './public/js/auxiliaryAPI.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const {urlencoded, json} = bodyParser;
 const port = process.env.PORT || 8080;
@@ -50,4 +55,4 @@ app.listen(port, (err) => {
   }
 });
 
-module.exports = app;
+export default app;

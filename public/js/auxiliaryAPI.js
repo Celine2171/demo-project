@@ -1,18 +1,18 @@
-const celsiusToFahrenheit = function (celsius){
+export const celsiusToFahrenheit = function (celsius){
   if (typeof celsius !== 'number') {
     throw new Error('input needs to be a number');
   }
   return celsius * (9/5) + 32;
 };
 
-const fahrenheitToCelsius = function (fahrenheit){
+export const fahrenheitToCelsius = function (fahrenheit){
   if (typeof fahrenheit !== 'number') {
     throw new Error('input needs to be a number');
   }
   return (fahrenheit - 32) * (5/9);
 };
 
-const getGreetingDependOnTime = function (myDate) {
+export const getGreetingDependOnTime = function (myDate) {
   const hours = myDate.getHours();
 
   if (hours >= 6 && hours < 12) {
@@ -27,10 +27,4 @@ const getGreetingDependOnTime = function (myDate) {
   else {
     return 'Gute Nacht';
   }
-};
-
-module.exports = {
-  celsiusToFahrenheit,
-  fahrenheitToCelsius,
-  getGreetingDependOnTime
 };
